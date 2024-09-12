@@ -5,7 +5,7 @@ import torch
 class Game:
     def __init__(self, number_of_games=1):
         current_time = time.time()
-        dataset = np.load('dsprites_ndarray_co1sh3sc6or40x32y32_64x64.npz', allow_pickle=True, encoding='latin1')
+        dataset = np.load('C:\Users\aymen\OneDrive\Documents\GitHub\deep-active-inference-mc\dsprites_ndarray_co1sh3sc6or40x32y32_64x64.npz', allow_pickle=True, encoding='latin1')
         self.imgs = torch.tensor(dataset['imgs'].reshape(-1, 64, 64, 1), dtype=torch.float32)
         latents_values = dataset['latents_values']
         latents_classes = dataset['latents_classes']
