@@ -12,7 +12,7 @@ class Game:
         metadata = dataset['metadata'][()]
         self.s_sizes = metadata['latents_sizes']  # [1 3 6 40 32 32]
         self.s_dim = self.s_sizes.size + 1  # Last dimension is reward!
-        self.s_bases = torch.cat((torch.tensor(metadata['latents_sizes'][::-1].cumprod()[::-1][1:], dtype=torch.float32),
+        self.s_bases = torch.cat((torch.tensor(np.copy(metadata['latents_sizes'][::-1].cumprod()[::-1][1:]), dtype=torch.float32),
                                   torch.tensor([1.], dtype=torch.float32)))  # [737280 245760  40960 1024 32 1]
         self.s_names = ['color', 'shape', 'scale', 'orientation', 'posX', 'posY', 'reward']
         self.games_no = number_of_games
