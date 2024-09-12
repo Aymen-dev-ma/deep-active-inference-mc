@@ -1,5 +1,5 @@
-numpy
-matplotlib
-scipy
-tensorflow-gpu>=2.0.0
-opencv-python
+torch==2.0.0          # Core PyTorch library
+numpy==1.23.0         # Numerical computing library
+matplotlib==3.5.0     # Plotting library for graphs and figures
+scipy==1.9.0          # Scientific computing tools
+pillow==9.2.0         # Image processing (for plotting or handling images)
